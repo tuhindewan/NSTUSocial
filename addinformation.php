@@ -319,13 +319,13 @@ if (isset($addinfo)) {
 
 
                           if ($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST['avatar'])) {
-                                $permited  = array('jpg', 'jpeg', 'png', 'gif');
+                              $permited  = array('jpg', 'jpeg', 'png', 'gif');
                               $file_name = $_FILES['image']['name'];
                               $file_size = $_FILES['image']['size'];
                               $file_temp = $_FILES['image']['tmp_name'];
 
 
-                               $div = explode('.', $file_name);
+                              $div = explode('.', $file_name);
                               $file_ext = strtolower(end($div));
                               $unique_image = substr(md5(time()), 0, 10).'.'.$file_ext;
                               $uploaded_image = "avatars/".$unique_image;
